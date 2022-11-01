@@ -1,3 +1,5 @@
+// 세탁소 사장 동혁
+
 #include <iostream>
 using namespace std;
 
