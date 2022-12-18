@@ -6,6 +6,8 @@ int main (void)
 {
     // ios_base::sync_with_stdio (0);
     // cin.tie (0); cout.tie (0);
+
+    // 이런 방식 처음 봄!
     cin.tie (0) -> sync_with_stdio(0);
 
     // PRICE - [1]: A, [2]: B, [3]: C, index -> num_car.
