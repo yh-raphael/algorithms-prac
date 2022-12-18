@@ -1,35 +1,48 @@
-// Written by Raphael on 2022-12-18-Sun.
 #include <iostream>
 using namespace std;
 
 int main (void)
 {
-    // ios_base::sync_with_stdio (0);
-    // cin.tie (0); cout.tie (0);
-    cin.tie (0) -> sync_with_stdio(0);
+    ios_base::sync_with_stdio (0);
+    cin.tie (0); cout.tie (0);
 
-    // PRICE - [1]: A, [2]: B, [3]: C, index -> num_car.
-    int price[4] = {0, };
-    for (int i = 1; i < 4; i++)
-        cin >> price[i];
+    // PRICE.
+    int A, B, C;
+    cin >> A >> B >> C;
     
-    // NUM_CAR, index -> timestamp.
-    int num_car[101] = {0, };
-    // IN,OUT TIME -> itereate 3 times.
-    for (int i = 0; i < 3; i++)
+    // IN,OUT TIME.
+    int arr[101] = {0, };
+    int c1_in, c1_out;
+    int c2_in, c2_out;
+    int c3_in, c3_out;
+
+    cin >> c1_in >> c1_out;
+    cin >> c2_in >> c2_out;
+    cin >> c3_in >> c3_out;
+    for (int i = 1; i <= 100; i++)
     {
-        int in, out;
-        cin >> in >> out;
-        // build NUM_CAR
-        for (int j = in; j < out; j++)
-            num_car[j] ++;
+        if (c1_in <= i && i < c1_out)
+            arr[i] ++;
+        if (c2_in <= i && i < c2_out)
+            arr[i] ++;
+        if (c3_in <= i && i < c3_out)
+            arr[i] ++;
     }
 
     // RESULT.
     int result = 0;
     for (int i = 1; i <= 100; i++)
     {
-        result += price[num_car[i]] * num_car[i];
+        if (arr[i] == 0) continue;
+        else if (arr[i] == 1) {
+            result += A;
+        }
+        else if (arr[i] == 2) {
+            result += B * 2;
+        }
+        else if (arr[i] == 3) {
+            result += C * 3;
+        }
     }
 
     cout << result << '\n';
