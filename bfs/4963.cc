@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <queue>        // Q.empty(), Q.front(), Q.pop(), Q.push();
-#include <cstring>      // memset (check, false, sizeof(check) / sizeof(bool));
+#include <cstring>      // memset (check, false, sizeof(check));
 #include <utility>      // pair, make_pair (nx, ny)
 
 using namespace std;
@@ -68,7 +68,7 @@ int main (void)
             }
         }
 
-        memset (check, false, sizeof(check) / sizeof (bool));
+        memset (check, false, sizeof(check));
         cnt = 0;
 
         // BFS.
