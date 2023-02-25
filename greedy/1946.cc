@@ -1,6 +1,7 @@
 // 이게 greedy로 풀 수 있는 것을 알아차리는 게 핵심! Written on 2023-02-25-Sat.
 #include <iostream>
-#include <vector>       // vector <pair <int, int> > ranking;
+#include <utility>      // pair <int, int>, make_pair (A, B);
+#include <vector>       // vector <pair <int, int> > ranking; ranking.push_back ();
 #include <algorithm>    // sort (ranking.begin (), ranking.end ());
 using namespace std;
 
