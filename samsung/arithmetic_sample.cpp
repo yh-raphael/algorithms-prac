@@ -1,5 +1,6 @@
 #include <iostream>
 #include <climits>
+#include <cmath>
 using namespace std;
 
 int main (void)
@@ -20,6 +21,10 @@ int main (void)
     cout << INT_MAX << '\n';
     cout << INT_MIN << '\n';
     cout << LONG_MAX << '\n';
-    cout << LONG_MIN << '\n';
+    cout << LONG_MIN << "\n\n";
+
+    cout << abs(-5) << '\n';
+    cout << abs(-5.5) << '\n';
+    cout << abs(-12.5) << '\n';
     return 0;
 }
