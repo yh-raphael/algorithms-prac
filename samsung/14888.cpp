@@ -16,6 +16,7 @@ void solve (long head, int index)
             max_val = head;
         if (head < min_val)
             min_val = head;
+        return;
     }
 
     long result = 0;
@@ -45,6 +46,9 @@ void solve (long head, int index)
 
 int main (void)
 {
+    ios_base::sync_with_stdio (false);
+    cin.tie (NULL); cout.tie (NULL);
+    
     cin >> N;
     // A[1], A[2], ... , A[N]
     for (int i = 1; i <= N; i++)
