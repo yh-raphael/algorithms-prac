@@ -1,17 +1,17 @@
 #include <iostream>
-#include <climits>
-#include <algorithm>
+#include <climits>          // INT_MAX
+#include <algorithm>        // sort (sum, sum + 6)
 using namespace std;
 
 typedef struct _point {
     int x;
     int y;
 } point;
+point pos[4];
 
 int N;
 int map[21][21];
 int label[21][21];
-point pos[4];
 
 int result = INT_MAX;
 
