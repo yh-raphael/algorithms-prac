@@ -21,5 +21,8 @@ int main (void)
 
     C = A;
     cout << C.r << ", " << C.c << ", " << C.dir << ", " << C.alive << endl;
+
+    fish D = {1, 2, 3, true};
+    cout << D.r << ", " << D.c << ", " << D.dir << ", " << D.alive << endl;
     return 0;
 }
